@@ -5,3 +5,5 @@ const fullName = () => {
 };
 
 fullName();
+
+console.log("hello");
