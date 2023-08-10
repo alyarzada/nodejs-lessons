@@ -1,12 +1,12 @@
-1. Node.js Fundemantals
+<!-- First Lesson Content: Node.js Fundemantals -->
 
-   - Browser vs Server
-   - REPL & CLI
-   - Globals
-   - Modules (CommonJS modules / ES6 Modules, Encapsulation)
-   - Built-in Modules
-   - NPM, Install first package, Share code
-   - Nodemon
+- Browser vs Server
+- REPL & CLI
+- Globals
+- Modules (CommonJS modules / ES6 Modules, Encapsulation)
+- Built-in Modules
+- NPM, Install first package, Share code
+- Nodemon
 
 <!-- Browser vs Server -->
 
