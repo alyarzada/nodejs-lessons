@@ -34,7 +34,7 @@
   - Inheritance
   - Polymorphism
 
-<!-- the "new" keyword -->
+- What exactly the "new" keyword does:
 
 - Create a prototype or new empty object {}
 - sets the value of this to be the new empty object
