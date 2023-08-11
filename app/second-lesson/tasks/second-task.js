@@ -7,9 +7,19 @@ class BankAccount {
     }
 
     get deposit() {
-        return `Deposit is ${this._balance}`
+        return `Deposit is ${this._balance}`;
+    }
+
+    set withdraw(money) {
+        if (money > 2) {
+            return `Withdraw is ${this._balance = money}`
+        }
+        else {
+            console.log("NO");
+        }
     }
 }
 
-const user1 = new BankAccount()
-console.log(user1.deposit= 1)
+const user1 = new BankAccount(2);
+user1.withdraw = 3
+console.log(user1.deposit)
