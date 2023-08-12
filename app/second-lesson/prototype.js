@@ -13,6 +13,8 @@ function Plane(color, brand) {
 const planeOne = new Plane("blue", "airbus");
 console.log(planeOne);
 
+console.log(helicopterOne);
+
 // invoke method
 planeOne.drive();
 
