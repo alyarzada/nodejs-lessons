@@ -1,0 +1,11 @@
+- Objects in js
+
+  - Checking tasks
+  - Object.create() method explanation
+  - Enumerating properties with (for...in | Object.keys(myObj) | Object.getOwnPropertyNames(myObj))
+  - Global Objects (Array, Object, Number, Math and etc.)
+  - Deleting properties with "delete" operator
+  - Prototype model (Before ES6)
+    - Constructor function
+    - Defining methods
+    - Inheritance with apply()
