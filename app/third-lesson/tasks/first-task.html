@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <script>
+        // <!-- 1:  Advanced Prototype Hierarchy ---------------------------------------------- -->
+        // - Advanced Prototype Hierarchy.
+        //   You are designing a simulation for a zoo. Create a prototype named Animal with properties name and species. Implement a method makeSound() that displays a generic animal sound. Extend the Animal prototype to create specific animal prototypes like Lion, Elephant, and Snake. Each specialized animal should override the makeSound() method with a species-appropriate sound. Additionally, implement a method describe() that displays detailed information about the animal.
+
+        function Animal(name, species) {
+            this.name = name;
+            this.species = species
+        }
+
+        Animal.prototype.makeSound = () => {
+            console.log(`All animal sound`) //create prototype
+        }
+
+        function Dog() {
+            Animal.apply(this, arguments); //create constructor
+        }
+
+        Dog.prototype = Object.create(Animal.prototype); // extends
+
+        Dog.prototype.makeSound = () => {
+            console.log(`Dog's sound is Woow Wooh`); // polymo OOP (override)
+        };
+
+        const dog1 = new Dog("Lucy", "Golden Retriever");
+        console.log(dog1)
+    </script>
+</body>
+
+</html>
