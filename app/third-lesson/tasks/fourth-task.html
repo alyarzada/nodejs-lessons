@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth</title>
+</head>
+
+<body>
+
+    <script>
+
+        //   Task 4: Abstraction.
+        //   You are tasked with building a simple vehicle management system for a transportation company. Implement a prototype named Vehicle with properties make, model, and year. Create a method getDetails() that returns a formatted string with the vehicle's make, model, and year.
+        //   Next, extend the Vehicle prototype to create specialized prototypes for Car, Truck, and Motorcycle. Each specialized vehicle should have additional properties that are specific to its type (e.g., numDoors for Car, cargoCapacity for Truck, engineType for Motorcycle).
+        //   Override the getDetails() method in each specialized vehicle prototype to include the type-specific properties in the formatted string. Ensure that the getDetails() method in the base Vehicle prototype remains generic.
+        //   Finally, create instances of each specialized vehicle and demonstrate the abstraction principle by invoking the getDetails() method on each vehicle. This task will encourage students to design a hierarchy that demonstrates abstraction by exposing only relevant details at each level of specialization.
+
+        function Vehicle(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        };
+
+        Vehicle.prototype.getDetails = function () {
+            return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`;
+        };
+
+        // function Car(color) {
+        //     Vehicle.apply(this, arguments); //super
+        //     this.color = color;
+        // };
+
+        function Car(make, model, year, color) {
+            Vehicle.apply(this, [make, model, year]);
+            this.color = color;
+        };
+
+        Car.prototype = Object.create(Vehicle.prototype);
+
+        Car.prototype.getDetails = function () {
+            return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}, Color: ${this.color}`;
+        }
+
+
+        const car = new Car('Toyota', 'Camry', 2023, "white");
+        console.log(car.getDetails());
+    </script>
+</body>
+
+</html>
