@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <script>
+        // - Task 3: Interface and Polymorphism.
+        //   You are building a messaging application. Create an interface prototype named MessageSender with a method sendMessage(). Then, create two separate prototypes, EmailSender and SMSSender, that implement the MessageSender interface. Each specialized sender should override the sendMessage() method to display the appropriate message delivery method (e.g., "Sending email to..."). Finally, create an array of sender objects and demonstrate polymorphism by invoking the sendMessage() method on each sender.
+
+        function MessageSender() { };
+
+        MessageSender.prototype.sendMessage = () => {
+            console.log("Message sending...")
+        };
+
+        function EmailSender() {
+            MessageSender.apply(this, arguments) //constructur
+        };
+        EmailSender.prototype = Object.create(MessageSender.prototype); //inher;
+        EmailSender.prototype.sendMessage = () => {
+            console.log("Email Message sending...")
+        }
+        const message = new MessageSender();
+        const EmailMessage = new EmailSender();
+        EmailMessage.sendMessage();
+
+
+    </script>
+</body>
+
+</html>

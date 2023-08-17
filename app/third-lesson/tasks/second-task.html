@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <script>
+        // <!-- Task 2: Composition and Aggregation ----------------------------------------------
+        // - Task 2: Composition and Aggregation.
+        //   You are developing a music player application. Create a prototype named Song with properties title, artist, and duration. Implement a method play() that displays a message indicating the song is playing. Then, create a prototype named Playlist that can hold an array of Song objects. Implement methods for adding and removing songs from the playlist, as well as a playAll() method that plays each song in the playlist in sequence. -->
+
+
+        function Song(title, artist, duration) {
+            this.title = title;
+            this.artist = artist;
+            this.duration = duration;
+        };
+
+        Song.prototype.play = function () {
+            console.log(`${this.title}, ${this.artist}, ${this.duration} is playing`);
+        };
+
+        function Playlist() {
+            this.songs = []
+        };
+
+        Playlist.prototype.allSongs = function () {
+            this.songs.forEach(song => song.play())
+        };
+
+        Playlist.prototype.addSongs = function (song) {
+            this.songs.push(song)
+        };
+
+        const artist1 = new Song('Hola', 'Beyonce', '1:20');
+        const playList = new Playlist();
+        playList.addSongs(artist1);
+
+        playList.allSongs();
+
+
+    </script>
+</body>
+
+</html>
